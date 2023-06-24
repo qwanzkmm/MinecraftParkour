@@ -44,7 +44,11 @@ public class PlayerInput : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1f;
+            
+        Cursor.lockState = CursorLockMode.Locked;
+
         PauseWindow.SetActive(false);
+        SettingsWindow.SetActive(false);
         AudioListener.pause = false;
     }
 
@@ -54,6 +58,8 @@ public class PlayerInput : MonoBehaviour
         {
             isPaused = false;
             Time.timeScale = 1f;
+            
+            Cursor.lockState = CursorLockMode.Locked;
 
             PauseWindow.SetActive(false);
             SettingsWindow.SetActive(false);
@@ -63,6 +69,8 @@ public class PlayerInput : MonoBehaviour
         {
             isPaused = true;
             Time.timeScale = 0f;
+            
+            Cursor.lockState = CursorLockMode.Confined;
 
             PauseWindow.SetActive(true);
             AudioListener.pause = true;
