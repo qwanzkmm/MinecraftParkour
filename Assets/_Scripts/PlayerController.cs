@@ -74,15 +74,14 @@ public class PlayerController : MonoBehaviour
 
         playerInput = GetComponentInChildren<PlayerInput>();
 
-        if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)
+        /*if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)
         {
             //
         }
         else
         {
             //
-        }
-
+        }*/
     }
 
     void Update()
