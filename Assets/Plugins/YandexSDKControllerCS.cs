@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 public class YandexSDKControllerCS : MonoBehaviour
 {
     public static YandexSDKControllerCS instance;
-    [DllImport("__Internal")] private static extern void GetTypePlayformDevice();
+    [DllImport("__Internal")] private static extern void GetTypePlatformDevice();
 
     
     public enum DeviceTypeWeb
@@ -47,5 +47,5 @@ public class YandexSDKControllerCS : MonoBehaviour
     }
     
 
-    public void GetPlatformDevice() => GetTypePlayformDevice();
+    public void GetPlatformDevice() => GetTypePlatformDevice();
 }
