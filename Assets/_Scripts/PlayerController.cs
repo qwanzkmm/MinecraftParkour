@@ -69,19 +69,19 @@ public class PlayerController : MonoBehaviour
         installGravity = gravity;
         WalkingValue = walkingSpeed;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        
 
         playerInput = GetComponentInChildren<PlayerInput>();
 
 #if UNITY_EDITOR
 
         isOnPs = true;
+        Cursor.lockState = CursorLockMode.Locked;
 #else
         if(YandexSDKControllerCS.instance.CurrentDeviceType ==  YandexSDKControllerCS.DeviceTypeWeb.Desktop)
         {
             isOnPs = true;
             PhoneCanvas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
@@ -104,15 +104,7 @@ public class PlayerController : MonoBehaviour
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
             isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftControl) : false : false;
-            //cam.fieldOfView = isRunning ? 90f : 70f; 
-            if (isRunning)
-            {
-                StartRunningFOV();
-            }
-            else
-            {
-                EndRunningFOV();
-            } 
+            if (isRunning) { StartRunningFOV(); }else { EndRunningFOV(); } 
             vertical = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Vertical") : 0;
             horizontal = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Horizontal") : 0;
             if (isRunning) RunningValue = Mathf.Lerp(RunningValue, RuningSpeed, timeToRunning * Time.deltaTime);

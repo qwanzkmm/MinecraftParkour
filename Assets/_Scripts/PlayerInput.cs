@@ -19,22 +19,17 @@ public class PlayerInput : MonoBehaviour
     private void Awake()
     {
         cam = GetComponent<Camera>();
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-
-    private void Start()
-    {
         cam.fieldOfView = 70f;
-        Debug.Log(Cursor.lockState);
-        isPaused = false;
+        
         Time.timeScale = 1f;
+        
+        isPaused = false;
         PauseWindow.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && isCanPressEsc)
         {
             Pause();
         }
@@ -44,14 +39,18 @@ public class PlayerInput : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1f;
-            
+        
+#if !UNITY_EDITOR
+        if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+            Cursor.lockState = CursorLockMode.Locked;
+#else 
         Cursor.lockState = CursorLockMode.Locked;
+#endif
 
         PauseWindow.SetActive(false);
         SettingsWindow.SetActive(false);
         AudioListener.pause = false;
     }
-
     public void Pause()
     {
         if (isPaused)
@@ -59,7 +58,12 @@ public class PlayerInput : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1f;
             
+#if !UNITY_EDITOR
+            if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+                Cursor.lockState = CursorLockMode.Locked;
+#else 
             Cursor.lockState = CursorLockMode.Locked;
+#endif
 
             PauseWindow.SetActive(false);
             SettingsWindow.SetActive(false);
@@ -69,8 +73,13 @@ public class PlayerInput : MonoBehaviour
         {
             isPaused = true;
             Time.timeScale = 0f;
-            
+
+#if !UNITY_EDITOR
+            if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+                Cursor.lockState = CursorLockMode.Confined;
+#else 
             Cursor.lockState = CursorLockMode.Confined;
+#endif
 
             PauseWindow.SetActive(true);
             AudioListener.pause = true;
