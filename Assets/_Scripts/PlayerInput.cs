@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using YandexSDK;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -16,14 +15,15 @@ public class PlayerInput : MonoBehaviour
     
     
     [DllImport("__Internal")] private static extern void SetToLeaderboard(int value);
-    private YandexSDKControllerCS YandexSDKControllerCs;
+    //private YandexSDKControllerCS YandexSDKControllerCs;
     
     private void Awake()
     {
         cam = GetComponent<Camera>();
         Time.timeScale = 1f;
+        isPaused = false;
 
-        if (YandexPlayerPrefs.HasKey("///////////////"))
+        if (PlayerPrefs.HasKey("Level_passed"))
         {
             
         }

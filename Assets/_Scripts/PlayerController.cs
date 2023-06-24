@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using YandexSDK;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -18,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     [Space(20)]
     [Header("Advance")]
-
     [SerializeField] float CroughHeight = 1.0f;
     [SerializeField] float gravity = 20.0f;
     [SerializeField] float timeToRunning = 2.0f;
@@ -47,7 +45,6 @@ public class PlayerController : MonoBehaviour
     float installGravity;
     bool WallDistance;
     [HideInInspector] public float WalkingValue;
-
     
     private PlayerInput playerInput;
 
@@ -64,6 +61,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         cam = GetComponentInChildren<Camera>();
+        
         InstallCroughHeight = characterController.height;
         InstallCameraMovement = Camera.localPosition;
         InstallFOV = cam.fieldOfView;
@@ -74,14 +72,21 @@ public class PlayerController : MonoBehaviour
 
         playerInput = GetComponentInChildren<PlayerInput>();
 
-        /*if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)
+#if UNITY_EDITOR
+
+        isOnPs = true;
+#else
+        if(YandexSDKControllerCS.instance.CurrentDeviceType ==  YandexSDKControllerCS.DeviceTypeWeb.Desktop)
         {
-            //
+            isOnPs = true;
+            PhoneCanvas.SetActive(false);
         }
         else
         {
-            //
-        }*/
+            isOnPs = false;
+            PhoneCanvas.SetActive(true);
+        }
+#endif
     }
 
     void Update()
@@ -116,7 +121,7 @@ public class PlayerController : MonoBehaviour
             Moving = horizontal < 0 || vertical < 0 || horizontal > 0 || vertical > 0 ? true : false;
 
 
-            if (Cursor.lockState == CursorLockMode.Locked && canMove && playerInput.isPaused == false)
+            if (canMove && playerInput.isPaused == false)
             {
                 Lookvertical = -Input.GetAxis("Mouse Y");
                 Lookhorizontal = Input.GetAxis("Mouse X");
