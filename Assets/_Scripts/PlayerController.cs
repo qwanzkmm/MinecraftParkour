@@ -104,6 +104,15 @@ public class PlayerController : MonoBehaviour
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
             isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftControl) : false : false;
+            //cam.fieldOfView = isRunning ? 90f : 70f; 
+            if (isRunning)
+            {
+                StartRunningFOV();
+            }
+            else
+            {
+                EndRunningFOV();
+            } 
             vertical = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Vertical") : 0;
             horizontal = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Horizontal") : 0;
             if (isRunning) RunningValue = Mathf.Lerp(RunningValue, RuningSpeed, timeToRunning * Time.deltaTime);
@@ -197,6 +206,42 @@ public class PlayerController : MonoBehaviour
         {
             float movementDirectionY = moveDirection.y;
             moveDirection.y = movementDirectionY;
+        }
+    }
+    
+    public void StartRunningFOV()
+    {
+        float timer = 0;
+        float timeToLoad = 1f;
+
+        if (cam.fieldOfView <= 80f)
+        {
+            timer += Time.deltaTime;
+            float fillAmount = Mathf.Clamp01(timer / timeToLoad);
+            cam.fieldOfView += fillAmount * 75f;
+
+            if (cam.fieldOfView > 80)
+            {
+                cam.fieldOfView = 80f;
+            }
+        }
+    }
+
+    public void EndRunningFOV()
+    {
+        float timer = 0;
+        float timeToLoad = 1f;
+
+        if (cam.fieldOfView >= 70f)
+        {
+            timer += Time.deltaTime;
+            float fillAmount = Mathf.Clamp01(timer / timeToLoad);
+            cam.fieldOfView -= fillAmount * 75f;
+
+            if (cam.fieldOfView < 70)
+            {
+                cam.fieldOfView = 70f;
+            }
         }
     }
 }

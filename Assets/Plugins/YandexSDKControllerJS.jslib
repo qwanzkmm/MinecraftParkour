@@ -1,6 +1,6 @@
 mergeInto(LibraryManager.library, {
 
-  GetTypePlayformDevice: function() {
+  GetTypePlatformDevice: function() {
     getTypeDevice();
   },
 
