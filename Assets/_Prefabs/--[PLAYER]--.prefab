@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 350326119587716907}
   - component: {fileID: 350326119587716906}
   - component: {fileID: 350326119587716949}
+  - component: {fileID: 6677202009501353602}
   m_Layer: 0
   m_Name: --[PLAYER]--
   m_TagString: Untagged
@@ -252,16 +253,16 @@ MonoBehaviour:
   Camera: {fileID: 350326119354314782}
   walkingSpeed: 4
   CroughSpeed: 1
-  RuningSpeed: 6
-  jumpSpeed: 5
+  RuningSpeed: 5.5
+  jumpSpeed: 6
   lookSpeed: 2
   lookXLimit: 80
   CroughHeight: 1
-  gravity: 9.81
+  gravity: 19.62
   timeToRunning: 2
   canMove: 1
   CanRunning: 1
-  CroughKey: 306
+  CroughKey: 304
   characterController: {fileID: 350326119587716906}
   moveDirection: {x: -0, y: -4.8779173, z: 0}
   isRunning: 0
@@ -276,3 +277,16 @@ MonoBehaviour:
   verticalFixedJoystick: 0
   lerpMult: 0
   PhoneCanvas: {fileID: 0}
+--- !u!65 &6677202009501353602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350326119587716948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

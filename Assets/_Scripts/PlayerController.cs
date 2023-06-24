@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             }
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftShift) : false : false;
+            isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftControl) : false : false;
             vertical = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Vertical") : 0;
             horizontal = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Horizontal") : 0;
             if (isRunning) RunningValue = Mathf.Lerp(RunningValue, RuningSpeed, timeToRunning * Time.deltaTime);
@@ -118,15 +118,6 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y = movementDirectionY;
             }
 
-            if (Input.GetKey(KeyCode.LeftShift) && canMove && characterController.isGrounded)
-            {
-                isRunning = true;
-            }
-            else
-            {
-                isRunning = false;
-            }
-            
             characterController.Move(moveDirection * Time.deltaTime);
             Moving = horizontal < 0 || vertical < 0 || horizontal > 0 || vertical > 0 ? true : false;
 
