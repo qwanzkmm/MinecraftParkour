@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
         RunningValue = RuningSpeed;
         installGravity = gravity;
         WalkingValue = walkingSpeed;
+
+        Cursor.lockState = CursorLockMode.Locked;
         
 
         playerInput = GetComponentInChildren<PlayerInput>();
