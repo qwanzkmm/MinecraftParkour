@@ -156,12 +156,12 @@ MonoBehaviour:
   Camera: {fileID: 963194228}
   walkingSpeed: 3
   CroughSpeed: 1
-  RuningSpeed: 4
+  RuningSpeed: 6
   jumpSpeed: 3
   lookSpeed: 2
   lookXLimit: 80
   CroughHeight: 1
-  gravity: 20
+  gravity: 9.81
   timeToRunning: 2
   canMove: 1
   CanRunning: 1

@@ -117,6 +117,16 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection.y = movementDirectionY;
             }
+
+            if (Input.GetKey(KeyCode.LeftShift) && canMove && characterController.isGrounded)
+            {
+                isRunning = true;
+            }
+            else
+            {
+                isRunning = false;
+            }
+            
             characterController.Move(moveDirection * Time.deltaTime);
             Moving = horizontal < 0 || vertical < 0 || horizontal > 0 || vertical > 0 ? true : false;
 

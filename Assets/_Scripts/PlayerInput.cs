@@ -15,18 +15,12 @@ public class PlayerInput : MonoBehaviour
     
     
     [DllImport("__Internal")] private static extern void SetToLeaderboard(int value);
-    //private YandexSDKControllerCS YandexSDKControllerCs;
-    
+
     private void Awake()
     {
         cam = GetComponent<Camera>();
         Time.timeScale = 1f;
         isPaused = false;
-
-        if (PlayerPrefs.HasKey("Level_passed"))
-        {
-            
-        }
     }
 
     private void Start()
