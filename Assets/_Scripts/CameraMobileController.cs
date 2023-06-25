@@ -40,8 +40,8 @@ public class CameraMobileController : MonoBehaviour, IPointerDownHandler, IPoint
             {
                 if(touch.phase == TouchPhase.Moved)
                 {
-                    Lookvertical = touch.deltaPosition.y / 50;
-                    Lookhorizontal = -touch.deltaPosition.x / 50;
+                    Lookvertical = touch.deltaPosition.y / 20;
+                    Lookhorizontal = -touch.deltaPosition.x / 20;
                 }
                 if (touch.phase == TouchPhase.Stationary)
                 {
