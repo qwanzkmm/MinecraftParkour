@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 3403e4a06fbcb7e40a007faff38193ca
   - enabled: 1
-    path: Assets/_Scenes/Dima.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/_Scenes/OlegA.unity
+    guid: f03cf7b774868734db1c366fd6fd3386
+  - enabled: 1
+    path: Assets/_Scenes/OlegB.unity
+    guid: dd2d1969f7f3d8340aaf6125b1d433ee
+  - enabled: 1
+    path: Assets/_Scenes/OlegC.unity
+    guid: 89cd061bc36ad9945822352935e46eed
+  - enabled: 1
+    path: Assets/_Scenes/OlegD.unity
+    guid: 5ef1f9a1370b6614e802dba10387ce4b
+  - enabled: 1
+    path: Assets/_Scenes/OlegE.unity
+    guid: c07f9613ae8cad846a44fc77a1d99c0a
   m_configObjects: {}
