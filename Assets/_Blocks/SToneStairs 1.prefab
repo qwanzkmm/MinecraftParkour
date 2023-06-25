@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5296310763608644296}
   m_Layer: 0
-  m_Name: SroneStairs
+  m_Name: SToneStairs 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945136929561079832, guid: 3fd2d2044f354ad40b0f99fd1125104b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7945136929561079832, guid: 3fd2d2044f354ad40b0f99fd1125104b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -128,7 +128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945136929561079832, guid: 3fd2d2044f354ad40b0f99fd1125104b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7945136929561079832, guid: 3fd2d2044f354ad40b0f99fd1125104b, type: 3}
       propertyPath: m_LocalPosition.z
