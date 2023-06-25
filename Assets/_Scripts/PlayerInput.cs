@@ -33,6 +33,12 @@ public class PlayerInput : MonoBehaviour
         {
             Pause();
         }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Ad ad = FindObjectOfType<Ad>();
+            ad.ShowRewarded();
+        }
     }
 
     public void ContinueGame()
