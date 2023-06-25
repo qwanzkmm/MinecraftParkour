@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
             isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftControl) : false : false;
             if (isRunning) { StartRunningFOV(); }else { EndRunningFOV(); } 
             vertical = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Vertical") : 0;
-            horizontal = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Horizontal") : 0;
+            horizontal = canMove ? WalkingValue * Input.GetAxis("Horizontal") : 0;
             if (isRunning) RunningValue = Mathf.Lerp(RunningValue, RuningSpeed, timeToRunning * Time.deltaTime);
             else RunningValue = WalkingValue;
             float movementDirectionY = moveDirection.y;
@@ -203,18 +203,21 @@ public class PlayerController : MonoBehaviour
     
     public void StartRunningFOV()
     {
-        float timer = 0;
-        float timeToLoad = 1f;
-
-        if (cam.fieldOfView <= 80f)
+        if (vertical > 0 || horizontal > 0)
         {
-            timer += Time.deltaTime;
-            float fillAmount = Mathf.Clamp01(timer / timeToLoad);
-            cam.fieldOfView += fillAmount * 75f;
+            float timer = 0;
+            float timeToLoad = 1f;
 
-            if (cam.fieldOfView > 80)
+            if (cam.fieldOfView <= 80f)
             {
-                cam.fieldOfView = 80f;
+                timer += Time.deltaTime;
+                float fillAmount = Mathf.Clamp01(timer / timeToLoad);
+                cam.fieldOfView += fillAmount * 75f;
+
+                if (cam.fieldOfView > 80)
+                {
+                    cam.fieldOfView = 80f;
+                }
             }
         }
     }
