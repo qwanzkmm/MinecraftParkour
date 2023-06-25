@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6765797503893141309, guid: a196bd72acba8604998011cfdf2192cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7586784
+      value: -4.4913216
       objectReference: {fileID: 0}
     - target: {fileID: 6765797503893141309, guid: a196bd72acba8604998011cfdf2192cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be39542db6db09f4f8a4519b18c46a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winSound: {fileID: 350326119474306411}
 --- !u!1001 &157447726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -846,6 +847,11 @@ PrefabInstance:
       objectReference: {fileID: 2062382344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+--- !u!82 &350326119474306411 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 106220579818272595, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+  m_PrefabInstance: {fileID: 350326119474306410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1141288252842377906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,10 +1074,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451775149449078394, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 899417730}
     - target: {fileID: 4185822616509454049, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1017270840}
+    - target: {fileID: 4185822617094815602, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4185822617538850925, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1164,5 +1178,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6987543426235259028, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182677252757122994, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_Color.a
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182677252757122994, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_Color.b
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182677252757122994, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_Color.g
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182677252757122994, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_Color.r
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518502517359833146, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 899417730}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}

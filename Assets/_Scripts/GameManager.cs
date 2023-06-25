@@ -8,5 +8,12 @@ public class GameManager : MonoBehaviour
     public void SetScene(int index)
     {
         SceneManager.LoadScene(index);
+        Time.timeScale = 1f;
+    }
+    
+    public void SetNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 }
