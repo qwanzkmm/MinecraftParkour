@@ -14,6 +14,10 @@ public class Ad : MonoBehaviour
         {
             ShowInterstitial();
         }
+        else
+        {
+            AudioListener.pause = false;
+        }
     }
 
     private void OnEnable()

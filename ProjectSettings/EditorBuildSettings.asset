@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/YarikC.unity
     guid: af7cdd67ec8aea144b1c568653e978fc
+  - enabled: 1
+    path: Assets/_Scenes/YarikD.unity
+    guid: 5ee7fe92849f5094caa143dcb8b66fb9
+  - enabled: 1
+    path: Assets/_Scenes/YarikE.unity
+    guid: 78176f9e3afcdcd49861752c331a067f
   m_configObjects: {}
