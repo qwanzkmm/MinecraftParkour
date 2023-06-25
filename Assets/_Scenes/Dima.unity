@@ -845,6 +845,78 @@ PrefabInstance:
       propertyPath: fixedJoystick
       value: 
       objectReference: {fileID: 2062382344}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788978060285091495, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277177421141806758, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124086783254200221, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
 --- !u!82 &350326119474306411 stripped

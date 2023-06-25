@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -57,6 +58,10 @@ public class PlayerController : MonoBehaviour
     private bool isOnPs = true;
     public GameObject PhoneCanvas;
 
+    [Header("Sounds")] [SerializeField] private AudioSource[] walkingSound;
+    float step = 0.2f;
+    float currentstep = 0.2f;
+    
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -103,8 +108,8 @@ public class PlayerController : MonoBehaviour
             }
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.LeftControl) : false : false;
-            if (isRunning) { StartRunningFOV(); }else { EndRunningFOV(); } 
+            isRunning = !isCrough ? CanRunning ? Input.GetKey(KeyCode.E) : false : false;
+            if (isRunning) { StartRunningFOV(); currentstep = 0.2f; }else { EndRunningFOV(); currentstep = 0.4f; } 
             vertical = canMove ? (isRunning ? RunningValue : WalkingValue) * Input.GetAxis("Vertical") : 0;
             horizontal = canMove ? WalkingValue * Input.GetAxis("Horizontal") : 0;
             if (isRunning) RunningValue = Mathf.Lerp(RunningValue, RuningSpeed, timeToRunning * Time.deltaTime);
@@ -152,6 +157,24 @@ public class PlayerController : MonoBehaviour
                     characterController.height = Height;
                     WalkingValue = Mathf.Lerp(WalkingValue, walkingSpeed, 4 * Time.deltaTime);
                 }
+            }
+
+            
+            if ((vertical > 0 || horizontal > 0) && characterController.isGrounded)
+            {
+                if (step >= currentstep)
+                {
+                    walkingSound[Random.Range(0, 2)].Play();
+                    step = 0;
+                }
+
+                step += Time.deltaTime;
+            }
+            else
+            {
+                walkingSound[0].Stop();
+                walkingSound[1].Stop();
+                walkingSound[2].Stop();
             }
         }
         else
