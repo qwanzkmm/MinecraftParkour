@@ -24,7 +24,7 @@ public class YandexSDKControllerCS : MonoBehaviour
     
     private void Start()
     {
-        GetPlatformDevice();
+        //GetPlatformDevice();
     }
     
     public DeviceTypeWEB CurrentDeviceType { get; private set; }// = DeviceTypeWEB.Mobile;
