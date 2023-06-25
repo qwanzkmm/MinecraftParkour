@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/OlegC.unity
     guid: 89cd061bc36ad9945822352935e46eed
+  - enabled: 1
+    path: Assets/_Scenes/OlegD.unity
+    guid: 5ef1f9a1370b6614e802dba10387ce4b
+  - enabled: 1
+    path: Assets/_Scenes/OlegE.unity
+    guid: c07f9613ae8cad846a44fc77a1d99c0a
   m_configObjects: {}
