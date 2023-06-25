@@ -6,12 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    [SerializeField] private AudioSource winSound;
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            winSound.Play();
+            Cursor.lockState = CursorLockMode.Confined;
+            Invoke(nameof(SetNextScene), 0.25f);
             Debug.Log("Player finished!");
         }
+    }
+
+    private void SetNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 }
