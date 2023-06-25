@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(index);
         Time.timeScale = 1f;
+        AudioListener.pause = false;
     }
     
     public void SetNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
+        AudioListener.pause = false;
     }
 }

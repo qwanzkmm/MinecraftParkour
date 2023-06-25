@@ -15,7 +15,7 @@ public class Finish : MonoBehaviour
         {
             winSound.Play();
             Cursor.lockState = CursorLockMode.Confined;
-            Invoke(nameof(SetNextScene), 0.25f);
+            Invoke(nameof(SetNextScene), 0.5f);
             Debug.Log("Player finished!");
             //Debug.Log($"isLevel{SceneManager.GetActiveScene().buildIndex}Passed");
             YandexPlayerPrefs.SetBool($"isLevel{SceneManager.GetActiveScene().buildIndex}Passed", true);

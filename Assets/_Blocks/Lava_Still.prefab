@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1124738762}
   - component: {fileID: 1124738763}
   - component: {fileID: 1124738764}
+  - component: {fileID: 1076013150721119465}
   m_Layer: 0
   m_Name: Lava_Still
   m_TagString: Untagged
@@ -96,7 +97,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5681023211949667193}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -153,3 +154,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 18.100216, z: 0.03647685}
   m_Center: {x: 0, y: 8.550108, z: -0.52762496}
+--- !u!114 &1076013150721119465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681023211949667193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee7d19c749ce8c74e834b09dac928d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
