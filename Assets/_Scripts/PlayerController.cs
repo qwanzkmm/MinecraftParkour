@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         isOnPs = true;
         Cursor.lockState = CursorLockMode.Locked;
 #else
-        if(YandexSDKControllerCS.instance.CurrentDeviceType ==  YandexSDKControllerCS.DeviceTypeWeb.Desktop)
+        if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)
         {
             isOnPs = true;
             PhoneCanvas.SetActive(false);

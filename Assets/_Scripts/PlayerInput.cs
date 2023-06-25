@@ -41,7 +41,7 @@ public class PlayerInput : MonoBehaviour
         Time.timeScale = 1f;
         
 #if !UNITY_EDITOR
-        if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+        if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
             Cursor.lockState = CursorLockMode.Locked;
 #else 
         Cursor.lockState = CursorLockMode.Locked;
@@ -59,7 +59,7 @@ public class PlayerInput : MonoBehaviour
             Time.timeScale = 1f;
             
 #if !UNITY_EDITOR
-            if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+            if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
                 Cursor.lockState = CursorLockMode.Locked;
 #else 
             Cursor.lockState = CursorLockMode.Locked;
@@ -75,7 +75,7 @@ public class PlayerInput : MonoBehaviour
             Time.timeScale = 0f;
 
 #if !UNITY_EDITOR
-            if(YandexSDKControllerCS.instance.CurrentDeviceType == YandexSDKControllerCS.DeviceTypeWeb.Desktop)    
+            if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
                 Cursor.lockState = CursorLockMode.Confined;
 #else 
             Cursor.lockState = CursorLockMode.Confined;

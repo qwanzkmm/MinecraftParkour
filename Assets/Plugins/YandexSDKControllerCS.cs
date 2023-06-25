@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using Assets.Scripts;
 
 public class YandexSDKControllerCS : MonoBehaviour
 {
     public static YandexSDKControllerCS instance;
     [DllImport("__Internal")] private static extern void GetTypePlatformDevice();
 
-    
-    public enum DeviceTypeWeb
-    {
-        Mobile,
-        Desktop
-    }
-    
     private void Awake()
     {
         if (instance != null)
@@ -30,19 +24,19 @@ public class YandexSDKControllerCS : MonoBehaviour
     
     private void Start()
     {
-        GetPlatformDevice();
+        //GetPlatformDevice();
     }
     
-    public DeviceTypeWeb CurrentDeviceType { get; private set; }// = DeviceTypeWEB.Mobile;
+    public DeviceTypeWEB CurrentDeviceType { get; private set; }// = DeviceTypeWEB.Mobile;
 
     public void SetTargetDeviceType(string typeDevice)
     {
         switch (typeDevice)
         {
-            case "desktop": CurrentDeviceType = DeviceTypeWeb.Desktop; break;
-            case "mobile": CurrentDeviceType = DeviceTypeWeb.Mobile; break;
+            case "desktop": CurrentDeviceType = DeviceTypeWEB.Desktop; break;
+            case "mobile": CurrentDeviceType = DeviceTypeWEB.Mobile; break;
 
-            default: CurrentDeviceType = DeviceTypeWeb.Mobile; break;
+            default: CurrentDeviceType = DeviceTypeWEB.Mobile; break;
         }
     }
     
