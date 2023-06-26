@@ -6072,10 +6072,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2754184071499823771, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2754184072627030835, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

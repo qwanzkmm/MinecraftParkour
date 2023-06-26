@@ -6,12 +6,15 @@ public class MobileInputController : MonoBehaviour, IPointerDownHandler, IPointe
     public bool isHold = false;
     public bool isContinueButton = false;
     public bool isMenuButton = false;
+    public bool isJumpButton = false;
 
     private PlayerInput playerInput;
+    private PlayerController playerController;
 
     private void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
+        playerController = FindObjectOfType<PlayerController>();
     }
 
 
@@ -37,6 +40,11 @@ public class MobileInputController : MonoBehaviour, IPointerDownHandler, IPointe
         {
             GameManager gameManager = FindObjectOfType<GameManager>();
             gameManager.SetScene(0);
+        }
+
+        if (isHold && isJumpButton)
+        {
+            playerController.Jump();
         }
     }
 

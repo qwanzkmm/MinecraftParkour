@@ -79,8 +79,8 @@ public class PlayerController : MonoBehaviour
 
 #if UNITY_EDITOR
 
-        isOnPs = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        isOnPs = false;
+        Cursor.lockState = CursorLockMode.Confined;
 #else
         if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)
         {
@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         {
             isOnPs = false;
             PhoneCanvas.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
         }
 #endif
     }
