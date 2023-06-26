@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     [Header("Pause")]
     [SerializeField] public GameObject PauseWindow;
     [SerializeField] private GameObject SettingsWindow;
+    [SerializeField] private GameObject MobileCameraManager;
     
     
     [DllImport("__Internal")] private static extern void SetToLeaderboard(int value);
@@ -22,6 +23,8 @@ public class PlayerInput : MonoBehaviour
         cam.fieldOfView = 70f;
         
         Time.timeScale = 1f;
+        
+        Cursor.lockState = CursorLockMode.Locked;
         
         isPaused = false;
         PauseWindow.SetActive(false);
@@ -49,6 +52,8 @@ public class PlayerInput : MonoBehaviour
 #if !UNITY_EDITOR
         if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
             Cursor.lockState = CursorLockMode.Locked;
+        else 
+            MobileCameraManager.SetActive(true);
 #else 
         Cursor.lockState = CursorLockMode.Locked;
 #endif
@@ -67,6 +72,8 @@ public class PlayerInput : MonoBehaviour
 #if !UNITY_EDITOR
             if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
                 Cursor.lockState = CursorLockMode.Locked;
+            else
+                MobileCameraManager.SetActive(true);
 #else 
             Cursor.lockState = CursorLockMode.Locked;
 #endif
@@ -83,6 +90,8 @@ public class PlayerInput : MonoBehaviour
 #if !UNITY_EDITOR
             if(YandexSDKControllerCS.instance.CurrentDeviceType == Assets.Scripts.DeviceTypeWEB.Desktop)    
                 Cursor.lockState = CursorLockMode.Confined;
+            else
+                MobileCameraManager.SetActive(false);
 #else 
             Cursor.lockState = CursorLockMode.Confined;
 #endif

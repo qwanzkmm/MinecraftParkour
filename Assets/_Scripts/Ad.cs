@@ -34,6 +34,12 @@ public class Ad : MonoBehaviour
     {
         YandexSDK.YaSDK.instance.ShowRewarded(Reward);
 
+        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+        playerInput.isCanPressEsc = false;
+        playerInput.isPaused = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        
         AudioListener.pause = true;
         Time.timeScale = 0f;
     }
@@ -52,6 +58,12 @@ public class Ad : MonoBehaviour
         {
             Time.timeScale = 0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
+            PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+            playerInput.isCanPressEsc = true;
+            playerInput.isPaused = false;
+            
+            YandexPlayerPrefs.SetBool($"isLevel{SceneManager.GetActiveScene().buildIndex}Passed", true);
         }
     }
 }
