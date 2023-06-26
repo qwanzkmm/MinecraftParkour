@@ -6191,8 +6191,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4778117436829628821, guid: 6dcc4c0a145b0e6468ca66970200dec1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dcc4c0a145b0e6468ca66970200dec1, type: 3}
+--- !u!1 &975229838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4778117436829628810, guid: 6dcc4c0a145b0e6468ca66970200dec1, type: 3}
+  m_PrefabInstance: {fileID: 975229837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &975229839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975229838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e04bd67e31e974d82b777071d7e363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &979056877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6158203032292657074, guid: b827c4d305fdc26499ce818b5f79fd3d, type: 3}
@@ -8829,6 +8847,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4185822617094815602, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
   m_PrefabInstance: {fileID: 1429697805}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1429697807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7975949511373055266, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+  m_PrefabInstance: {fileID: 1429697805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1434259991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9435,6 +9458,10 @@ PrefabInstance:
       propertyPath: fixedJoystick
       value: 
       objectReference: {fileID: 120566199}
+    - target: {fileID: 350326119587716949, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MobilePauseButton
+      value: 
+      objectReference: {fileID: 1429697807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
 --- !u!82 &1527215615 stripped

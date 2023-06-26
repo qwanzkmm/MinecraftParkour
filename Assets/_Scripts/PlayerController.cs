@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     float step = 0.2f;
     float currentstep = 0.2f;
     
+    [Header("Mobile Buttons")]
+    [SerializeField] private GameObject MobilePauseButton;
+    
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -87,12 +90,14 @@ public class PlayerController : MonoBehaviour
             isOnPs = true;
             PhoneCanvas.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
+            MobilePauseButton.SetActive(false);
         }
         else
         {
             isOnPs = false;
             PhoneCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
+            MobilePauseButton.SetActive(true);
         }
 #endif
     }

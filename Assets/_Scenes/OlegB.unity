@@ -8501,6 +8501,10 @@ PrefabInstance:
       propertyPath: fixedJoystick
       value: 
       objectReference: {fileID: 204633330}
+    - target: {fileID: 350326119587716949, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MobilePauseButton
+      value: 
+      objectReference: {fileID: 2135722472}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
 --- !u!114 &1728324271 stripped
@@ -9879,3 +9883,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+--- !u!1 &2135722472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7975949511373055266, guid: 0302f138043db8047b61cec01ad3f8be, type: 3}
+  m_PrefabInstance: {fileID: 2135722471}
+  m_PrefabAsset: {fileID: 0}
