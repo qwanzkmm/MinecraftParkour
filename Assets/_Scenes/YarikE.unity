@@ -971,6 +971,10 @@ PrefabInstance:
       propertyPath: SettingsWindow
       value: 
       objectReference: {fileID: 1957866247}
+    - target: {fileID: 350326119354314783, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MobileCameraManager
+      value: 
+      objectReference: {fileID: 1174904305}
     - target: {fileID: 350326119587716907, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9257,6 +9261,11 @@ MonoBehaviour:
 --- !u!1 &1174904304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2754184071499823771, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
+  m_PrefabInstance: {fileID: 1174904302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1174904305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2754184072629453818, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
   m_PrefabInstance: {fileID: 1174904302}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1184080463 stripped

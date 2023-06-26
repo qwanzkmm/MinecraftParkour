@@ -309,6 +309,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2754184071499823771, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
   m_PrefabInstance: {fileID: 4933501}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4933504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2754184072629453818, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
+  m_PrefabInstance: {fileID: 4933501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &11837600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,6 +329,10 @@ PrefabInstance:
       propertyPath: SettingsWindow
       value: 
       objectReference: {fileID: 1740072020}
+    - target: {fileID: 350326119354314783, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MobileCameraManager
+      value: 
+      objectReference: {fileID: 4933504}
     - target: {fileID: 350326119587716907, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
       propertyPath: m_RootOrder
       value: 2

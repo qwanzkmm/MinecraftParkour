@@ -6082,6 +6082,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
+--- !u!1 &1293935485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2754184072629453818, guid: 7aabdb08b12aca64f85ada0cf4cc6347, type: 3}
+  m_PrefabInstance: {fileID: 1293935484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1313578810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8436,6 +8441,10 @@ PrefabInstance:
       propertyPath: SettingsWindow
       value: 
       objectReference: {fileID: 1341661508}
+    - target: {fileID: 350326119354314783, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
+      propertyPath: MobileCameraManager
+      value: 
+      objectReference: {fileID: 1293935485}
     - target: {fileID: 350326119587716907, guid: 25d1715811ebd6f439d937dcb8b02f97, type: 3}
       propertyPath: m_RootOrder
       value: 3
