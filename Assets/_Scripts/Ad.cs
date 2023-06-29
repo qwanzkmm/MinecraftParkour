@@ -56,9 +56,6 @@ public class Ad : MonoBehaviour
     {
         if (this.Reward == reward)
         {
-            Time.timeScale = 0f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            
             PlayerInput playerInput = FindObjectOfType<PlayerInput>();
             playerInput.isCanPressEsc = true;
             playerInput.isPaused = false;
