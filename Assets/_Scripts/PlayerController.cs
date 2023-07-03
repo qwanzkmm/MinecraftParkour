@@ -89,7 +89,12 @@ public class PlayerController : MonoBehaviour
         {
             isOnPs = true;
             PhoneCanvas.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            
+            if(YandexSDK.YaSDK.instance.isInterstitialReady == false)
+                Cursor.lockState = CursorLockMode.Locked;
+            else
+                Cursor.lockState = CursorLockMode.Confined;
+            
             MobilePauseButton.SetActive(false);
         }
         else

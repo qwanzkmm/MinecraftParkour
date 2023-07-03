@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
         
         Time.timeScale = 1f;
         
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         
         isPaused = false;
         PauseWindow.SetActive(false);

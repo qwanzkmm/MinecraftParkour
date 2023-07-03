@@ -320,6 +320,7 @@ MonoBehaviour:
   isHold: 0
   isContinueButton: 1
   isMenuButton: 0
+  isJumpButton: 0
 --- !u!1 &4185822616567351883
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +820,7 @@ MonoBehaviour:
   isHold: 0
   isContinueButton: 0
   isMenuButton: 1
+  isJumpButton: 0
 --- !u!1 &4185822617576557587
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +993,7 @@ GameObject:
   - component: {fileID: 4185822618375382632}
   - component: {fileID: 4185822618375382633}
   - component: {fileID: 4185822618375382634}
+  - component: {fileID: 2592131211181264499}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1084,6 +1087,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2592131211181264499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185822618375382635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72eb6545290fd2b4898e7130bd2ca352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipLvlText: {fileID: 2643020552611491708}
 --- !u!1 &5211733486232639261
 GameObject:
   m_ObjectHideFlags: 0
