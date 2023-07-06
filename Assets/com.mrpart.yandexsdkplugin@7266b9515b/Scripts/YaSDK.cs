@@ -145,7 +145,7 @@ namespace YandexSDK
             AudioListener.pause = false;
             Time.timeScale = 1f;
             
-            Cursor.lockState = YandexSDK.YaSDK.instance.currentPlatform == Platform.desktop ? CursorLockMode.Locked : CursorLockMode.Confined;
+            Cursor.lockState = YandexSDK.YaSDK.instance.currentPlatform == Platform.desktop && SceneManager.GetActiveScene().buildIndex != 0 ? CursorLockMode.Locked : CursorLockMode.Confined;
             
             
             StartCoroutine(CountTillNextInterstitial());
